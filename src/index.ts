@@ -21,9 +21,9 @@ export const agent = new Agentica({
       protocol: "class",
       application: typia.llm.application<GoogleCalendarService, "chatgpt">(),
       execute: new GoogleCalendarService({
-        clientId: process.env.GOOGLE_CALENDAR_CLIENT_ID!,
-        clientSecret: process.env.GOOGLE_CALENDAR_CLIENT_SECRET!,
-        secret: process.env.GOOGLE_CALENDAR_REFRESH_TOKEN!,
+        googleClientId: process.env.GOOGLE_CALENDAR_CLIENT_ID!,
+        googleClientSecret: process.env.GOOGLE_CALENDAR_CLIENT_SECRET!,
+        googleRefreshToken: process.env.GOOGLE_CALENDAR_REFRESH_TOKEN!,
       }),
     },
   ],
